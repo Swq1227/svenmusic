@@ -1,6 +1,6 @@
 <view class="indexContainer"> 
   <image class="avatarUrl" src="/static/images/nvsheng.jpg"></image>
-  <text class="userName">东北汉子</text>
+  <text class="userName">{{msg}}</text>
   <view class="goSatudy">
     <text>Hello world</text>
   </view>
