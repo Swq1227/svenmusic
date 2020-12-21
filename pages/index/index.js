@@ -12,17 +12,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("onLoad()")
-    //修改 msg 的状态数据，语法 this.setData
-    console.log(this.data.msg)
-    setTimeout(() => {
-      this.setData({
-        msg: '修改之后的数据'
-      })
-      console.log(this.data.msg)
-    }, 2000)
+    // console.log("onLoad()")
+    // //修改 msg 的状态数据，语法 this.setData
+    // console.log(this.data.msg)
+    // setTimeout(() => {
+    //   this.setData({
+    //     msg: '修改之后的数据'
+    //   })
+    //   console.log(this.data.msg)
+    // }, 2000)
 
-    console.log(this.data.msg)
+    // console.log(this.data.msg)
 
   },
 
@@ -73,5 +73,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  handleParent(){
+    console.log("Parent")
+  },
+  handleChild(){
+    console.log("Child")
   }
 })
