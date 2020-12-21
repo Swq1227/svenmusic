@@ -5,9 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    msg: "初始化数据"
+    msg: "初始化数据",
+    userInfo:{} //用户的基本信息
   },
 
+  
   /**
    * 生命周期函数--监听页面加载
    */
@@ -23,7 +25,18 @@ Page({
     // }, 2000)
 
     // console.log(this.data.msg)
-
+    //授权以后获取用户信息
+    wx.getUserInfo({
+      success:(res) => {
+        console.log(res);
+        this.setData({
+          userInfo:res.userInfo
+        })
+      },
+      fail:(err)=>{
+        console.log(err);
+      }
+    })
   },
 
   /**
@@ -87,5 +100,16 @@ Page({
   },
   handleChild() {
     console.log("Child")
-  }
+  },
+
+  /**
+   * 获取用户胡信息
+   */
+  handleGetUserInfo(res){
+    console.log(res)
+    if (res.detail.userInfo) {
+      //修改 userInfo 的状态数据
+      this.setData({userInfo:res.detail.userInfo})
+    }
+  },
 })
