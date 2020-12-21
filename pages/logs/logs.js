@@ -1,28 +1,17 @@
-// pages/index/index.js
+// pages/logs/logs.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    msg: "初始化数据"
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log("onLoad()")
-    // //修改 msg 的状态数据，语法 this.setData
-    // console.log(this.data.msg)
-    // setTimeout(() => {
-    //   this.setData({
-    //     msg: '修改之后的数据'
-    //   })
-    //   console.log(this.data.msg)
-    // }, 2000)
-
-    // console.log(this.data.msg)
 
   },
 
@@ -73,19 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  /**
-   * 跳转至 logs 的页面方法
-   */
-  toLogs() {
-    wx.redirectTo({
-      url: '/pages/logs/logs',
-    })
-  },
-  handleParent() {
-    console.log("Parent")
-  },
-  handleChild() {
-    console.log("Child")
   }
 })
