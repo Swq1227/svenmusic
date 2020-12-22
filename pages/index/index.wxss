@@ -75,6 +75,41 @@
 
 /* 排行榜区域样式 */
 
+.topListSwiper{
+  height: 400rpx;
+}
+
 .topList{
   padding:20rpx;
+}
+.swiperItem{
+  width: 96%;
+  background:#fbfbfb;
+}
+
+.swiperItem .title{
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.musicItem{
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+
+.musicItem .count{
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.musicItem .musicName{
+  height: 100rpx;
+  line-height: 100rpx;
 }
