@@ -58,7 +58,7 @@
 /* 内容区样式 */
 .recommendScroll{
   display: flex;
-  margin-top: 10rpx;
+  padding-top: 18rpx;
 }
 
 
