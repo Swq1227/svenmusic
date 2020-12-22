@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    bannerList: [], //轮播图数据
 
   },
 
@@ -15,6 +16,9 @@ Page({
    */
   onLoad: async function (options) {
     let bannerListData = await request('/banner', {type: 2});
+    this.setData({
+      bannerList:bannerListData.banners
+    })
     // console.log('结果数据：', bannerListData);
 
   },
