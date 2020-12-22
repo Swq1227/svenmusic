@@ -15,7 +15,7 @@ Page({
    */
   onLoad: async function (options) {
     let bannerListData = await request('/banner', {type: 2});
-    console.log('结果数据：', bannerListData);
+    // console.log('结果数据：', bannerListData);
 
   },
 
