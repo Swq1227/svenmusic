@@ -9,6 +9,7 @@ Page({
   data: {
     bannerList: [], //轮播图数据
     recommendList:[],//推荐歌单数据
+    topList:[],//排行榜数据
 
   },
 
@@ -16,17 +17,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
+    // 轮播图
     let bannerListData = await request('/banner', {type: 2});
     this.setData({
       bannerList:bannerListData.banners
     })
-
-    let recommendListDate = await request('/personalized',{limit:10});
+    // 推荐歌单
+    let recommendListData = await request('/personalized',{limit:10});
     this.setData({
-      recommendList:recommendListDate.result
+      recommendList:recommendListData.result
     })
-
-
+    // 排行榜
+    /**
+     * 需求分析：
+     *  1. 根据 idx 值获取数据
+     *  2. idx 取值需要0-4
+     */
+    let index =0;
+    let resultArr=[]
+    while (index<5){
+      let topListData = await request('/top/list',{idx:index++});
+      let topListItem ={name:topListData.playlist.name,tracks:topListData.playlist.tracks.slice(0,3)}
+      resultArr.push(topListItem)
+      //更新 toplist
+    this.setData({
+      topList:resultArr
+    })
+    }
+    
   },
 
   /**

@@ -47,66 +47,17 @@
     <NavHeader title="排行榜" nav="热歌风向标"> </NavHeader>
     <!-- 排行榜区域 -->
     <swiper class="topListSwiper" next-margin="50rpx" circular="true">
-      <swiper-item> 
+      <swiper-item wx:for="{{topList}}" wx:key="name" wx:for-item="typeItem"> 
         <view class="swiperItem">
-          <view class="title">云音乐热歌榜</view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">1</text>
-            <text class="musicName">光辉岁月</text>
-          </view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">2</text>
-            <text class="musicName">海阔天空</text>
-          </view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">3</text>
-            <text class="musicName"> 真的爱你</text>
+          <view class="title">{{typeItem.name}}</view>
+          <view class="musicItem" wx:for="{{typeItem.tracks}}" wx:key="id" wx:for-item="musicItem"> 
+            <image src="{{musicItem.al.picUrl}}"></image>
+            <text class="count">{{index +1 }}</text>
+            <text class="musicName">{{musicItem.al.name}}</text>
           </view>
         </view>
       </swiper-item>
-      <swiper-item>
-        <view class="swiperItem">
-          <view class="title">云音乐热歌榜</view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">1</text>
-            <text class="musicName">光辉岁月</text>
-          </view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">2</text>
-            <text class="musicName">海阔天空</text>
-          </view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">3</text>
-            <text class="musicName"> 真的爱你</text>
-          </view>
-        </view>
-      </swiper-item>
-      <swiper-item>
-        <view class="swiperItem">
-          <view class="title">云音乐热歌榜</view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">1</text>
-            <text class="musicName">光辉岁月</text>
-          </view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">2</text>
-            <text class="musicName">海阔天空</text>
-          </view>
-          <view class="musicItem">
-            <image src="/static/images/nvsheng.jpg"></image>
-            <text class="count">3</text>
-            <text class="musicName"> 真的爱你</text>
-          </view>
-        </view>
-      </swiper-item>
+
     </swiper>
   </view>
 </view>
