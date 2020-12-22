@@ -39,25 +39,9 @@
     </view>
     <!-- 内容区域 -->
     <scroll-view class="recommendScroll" enable-flex="true" scroll-x="true">
-      <view class="scrollItem">
-        <image src="/static/images/nvsheng.jpg"></image>
-        <text>女神</text>
-      </view>
-      <view class="scrollItem">
-        <image src="/static/images/nvsheng.jpg"></image>
-        <text>这是推荐内容区域啧啧啧啧啧啧做做做做做做做做做做做做</text>
-      </view>
-      <view class="scrollItem">
-        <image src="/static/images/nvsheng.jpg"></image>
-        <text>女神</text>
-      </view>
-      <view class="scrollItem">
-        <image src="/static/images/nvsheng.jpg"></image>
-        <text>女神</text>
-      </view>
-      <view class="scrollItem">
-        <image src="/static/images/nvsheng.jpg"></image>
-        <text>女神</text>
+      <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" wx:for-item="recommendItem">
+        <image src="{{recommendItem.picUrl}}"></image>
+        <text>{{recommendItem.name}}</text>
       </view>
     </scroll-view>
   </view>

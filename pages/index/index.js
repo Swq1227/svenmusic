@@ -8,6 +8,7 @@ Page({
    */
   data: {
     bannerList: [], //轮播图数据
+    recommendList:[],//推荐歌单数据
 
   },
 
@@ -19,7 +20,12 @@ Page({
     this.setData({
       bannerList:bannerListData.banners
     })
-    // console.log('结果数据：', bannerListData);
+
+    let recommendListDate = await request('/personalized',{limit:10});
+    this.setData({
+      recommendList:recommendListDate.result
+    })
+
 
   },
 
