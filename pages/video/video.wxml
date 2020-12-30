@@ -7,4 +7,22 @@
     </view>
     <image src="/static/images/logo.png"></image>
   </view>
+  <!-- 导航区域 -->
+  <scroll-view scroll-x class="navScroll" enable-flex>
+    <view class="navItem">
+      <view class="navContent active">
+        推荐
+      </view>
+    </view>
+    <view class="navItem">
+      <view class="navContent active">
+        推荐2ssssssssssssssssssssssssssssss
+      </view>
+    </view>
+    <view class="navItem">
+      <view class="navContent">
+        推荐3ssssssssssssssssssssssssssssssss
+      </view>
+    </view>
+  </scroll-view>
 </view>
