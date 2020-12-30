@@ -1,0 +1,28 @@
+.recommendDongContainer .header{
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.recommendDongContainer .header image{
+  width: 100%;
+  height: 100%;
+}
+
+.recommendDongContainer .header .date{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -360rpx;
+  margin-top: -30rpx;
+  width: 100%;
+  height: 100rpx;
+  border: 1rxp solid red;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+}
+
+.header .day{
+  font-size: 38rpx;
+}
