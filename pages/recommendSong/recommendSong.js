@@ -13,6 +13,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //判断用户是否登录
+    let userInfo = wx.getStorageInfoSync('userInfo');
+    
     this.setData({
       day:new Date().getDate(),
       month:new Date().getMonth()+1

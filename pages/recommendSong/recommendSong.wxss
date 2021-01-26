@@ -26,3 +26,23 @@
 .header .day{
   font-size: 38rpx;
 }
+
+/* 列表区域样式 */
+.ListContainer{
+  position: relative;
+  top: -20rpx;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  background: #fff;
+}
+
+.ListHeader{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.ListHeader .selectMore{
+  float: right;
+}
+
+
