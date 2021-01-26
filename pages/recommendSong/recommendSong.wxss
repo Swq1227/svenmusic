@@ -45,4 +45,32 @@
   float: right;
 }
 
-
+/* 内容区 */
+.scrollItem{
+  position: relative;
+  display: flex;
+}
+.scrollItem image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+.musicInfo{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.musicInfo text{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+}
+.scrollItem .iconfont{
+  position: absolute;
+  right: 0;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+  padding-right: 20rpx;
+}
